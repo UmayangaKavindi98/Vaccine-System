@@ -132,7 +132,10 @@ public class AdminHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_CitizenMouseClicked
 
     private void Vaccine1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Vaccine1MouseClicked
-        // TODO add your handling code here:
+       AdminVaccineDetails vaccine = new AdminVaccineDetails();
+
+       vaccine.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_Vaccine1MouseClicked
 
     private void Vaccinated1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Vaccinated1MouseClicked
