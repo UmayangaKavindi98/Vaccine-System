@@ -125,7 +125,7 @@ public class AdminHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_InfectedMouseClicked
 
     private void CitizenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CitizenMouseClicked
-        CitizenDetails citizen = new CitizenDetails();
+        AdminCitizenDetails citizen = new AdminCitizenDetails();
 
         citizen.setVisible(true);
         this.dispose();

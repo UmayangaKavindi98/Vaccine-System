@@ -9,7 +9,7 @@ package vaccinesys;
  *
  * @author Umayanga
  */
-public class VaccineSys {
+public class AdminVaccineSys {
 
     /**
      * @param args the command line arguments
