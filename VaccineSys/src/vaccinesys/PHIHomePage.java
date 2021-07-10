@@ -34,7 +34,7 @@ public class PHIHomePage extends javax.swing.JFrame {
         ViewInfected = new javax.swing.JButton();
         topic = new javax.swing.JLabel();
         logout = new javax.swing.JButton();
-        PHI = new javax.swing.JLabel();
+        img = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,7 +53,12 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewCitizenMouseClicked(evt);
             }
         });
-        jPanel1.add(ViewCitizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 260, 60));
+        ViewCitizen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewCitizenActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ViewCitizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 450, 60));
 
         ViewVaccine.setBackground(new java.awt.Color(255, 51, 51));
         ViewVaccine.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -70,7 +75,7 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewVaccineActionPerformed(evt);
             }
         });
-        jPanel1.add(ViewVaccine, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 260, 60));
+        jPanel1.add(ViewVaccine, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 450, 60));
 
         ViewVaccinated.setBackground(new java.awt.Color(255, 51, 51));
         ViewVaccinated.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -82,7 +87,7 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewVaccinatedMouseClicked(evt);
             }
         });
-        jPanel1.add(ViewVaccinated, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 260, 60));
+        jPanel1.add(ViewVaccinated, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 450, 60));
 
         ViewInfected.setBackground(new java.awt.Color(255, 51, 51));
         ViewInfected.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -94,19 +99,19 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewInfectedMouseClicked(evt);
             }
         });
-        jPanel1.add(ViewInfected, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 260, 60));
+        jPanel1.add(ViewInfected, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 450, 60));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("PHI");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 80, -1));
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 80, -1));
 
         logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
         logout.setText("Log Out");
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, 100, 30));
 
-        PHI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/PHI.png"))); // NOI18N
-        jPanel1.add(PHI, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, 210, 250));
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/PHI.png"))); // NOI18N
+        jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         background.setBackground(new java.awt.Color(255, 102, 51));
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
@@ -163,6 +168,10 @@ public class PHIHomePage extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_ViewInfectedMouseClicked
 
+    private void ViewCitizenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewCitizenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ViewCitizenActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -199,12 +208,12 @@ public class PHIHomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PHI;
     private javax.swing.JButton ViewCitizen;
     private javax.swing.JButton ViewInfected;
     private javax.swing.JButton ViewVaccinated;
     private javax.swing.JButton ViewVaccine;
     private javax.swing.JLabel background;
+    private javax.swing.JLabel img;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton logout;
     private javax.swing.JLabel topic;
