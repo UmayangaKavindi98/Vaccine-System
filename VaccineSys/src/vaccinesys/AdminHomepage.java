@@ -32,9 +32,10 @@ public class AdminHomepage extends javax.swing.JFrame {
         logout = new javax.swing.JButton();
         img = new javax.swing.JLabel();
         Citizen = new javax.swing.JButton();
-        Infected = new javax.swing.JButton();
+        SendMail = new javax.swing.JButton();
         Vaccine1 = new javax.swing.JButton();
         Vaccinated1 = new javax.swing.JButton();
+        Infected1 = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,19 +65,19 @@ public class AdminHomepage extends javax.swing.JFrame {
                 CitizenMouseClicked(evt);
             }
         });
-        jPanel1.add(Citizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 420, 60));
+        jPanel1.add(Citizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 420, 60));
 
-        Infected.setBackground(new java.awt.Color(255, 51, 51));
-        Infected.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        Infected.setForeground(new java.awt.Color(255, 255, 255));
-        Infected.setText("Infected Details");
-        Infected.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
-        Infected.addMouseListener(new java.awt.event.MouseAdapter() {
+        SendMail.setBackground(new java.awt.Color(255, 51, 51));
+        SendMail.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
+        SendMail.setForeground(new java.awt.Color(255, 255, 255));
+        SendMail.setText("Send Mail");
+        SendMail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        SendMail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                InfectedMouseClicked(evt);
+                SendMailMouseClicked(evt);
             }
         });
-        jPanel1.add(Infected, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 420, 60));
+        jPanel1.add(SendMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 420, 60));
 
         Vaccine1.setBackground(new java.awt.Color(255, 51, 51));
         Vaccine1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -88,7 +89,7 @@ public class AdminHomepage extends javax.swing.JFrame {
                 Vaccine1MouseClicked(evt);
             }
         });
-        jPanel1.add(Vaccine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 420, 60));
+        jPanel1.add(Vaccine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 420, 60));
 
         Vaccinated1.setBackground(new java.awt.Color(255, 51, 51));
         Vaccinated1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -100,7 +101,19 @@ public class AdminHomepage extends javax.swing.JFrame {
                 Vaccinated1MouseClicked(evt);
             }
         });
-        jPanel1.add(Vaccinated1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 420, 60));
+        jPanel1.add(Vaccinated1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 420, 60));
+
+        Infected1.setBackground(new java.awt.Color(255, 51, 51));
+        Infected1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
+        Infected1.setForeground(new java.awt.Color(255, 255, 255));
+        Infected1.setText("Infected Details");
+        Infected1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        Infected1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Infected1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Infected1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 420, 60));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("rhnnf");
@@ -120,9 +133,12 @@ public class AdminHomepage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void InfectedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfectedMouseClicked
-        
-    }//GEN-LAST:event_InfectedMouseClicked
+    private void SendMailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SendMailMouseClicked
+        AdminSendMail mail = new AdminSendMail();
+
+        mail.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_SendMailMouseClicked
 
     private void CitizenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CitizenMouseClicked
         AdminCitizenDetails citizen = new AdminCitizenDetails();
@@ -139,8 +155,18 @@ public class AdminHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_Vaccine1MouseClicked
 
     private void Vaccinated1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Vaccinated1MouseClicked
-        // TODO add your handling code here:
+        AdminVaccinatedDetails vaccinated = new AdminVaccinatedDetails();
+
+       vaccinated.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_Vaccinated1MouseClicked
+
+    private void Infected1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Infected1MouseClicked
+       AdminInfectedDetails infected = new AdminInfectedDetails();
+
+       infected.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_Infected1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -179,7 +205,8 @@ public class AdminHomepage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Citizen;
-    private javax.swing.JButton Infected;
+    private javax.swing.JButton Infected1;
+    private javax.swing.JButton SendMail;
     private javax.swing.JButton Vaccinated1;
     private javax.swing.JButton Vaccine1;
     private javax.swing.JLabel background;
