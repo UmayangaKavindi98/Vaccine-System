@@ -120,7 +120,7 @@ public class AdminCitizenDetails extends javax.swing.JFrame {
         Lname6.setText("Last name");
         jPanel2.add(Lname6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
         jPanel2.add(occupationtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 260, 30));
-        jPanel2.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 260, 30));
+        jPanel2.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
 
         delete.setBackground(new java.awt.Color(255, 51, 51));
         delete.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
