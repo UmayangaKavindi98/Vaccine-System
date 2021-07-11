@@ -36,9 +36,10 @@ public class Login extends javax.swing.JFrame {
         signin = new javax.swing.JLabel();
         Uname = new javax.swing.JLabel();
         pwd = new javax.swing.JLabel();
-        UserNametxt = new javax.swing.JTextField();
+        Usertxt = new javax.swing.JTextField();
         login = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        passTxt = new javax.swing.JPasswordField();
+        lblError = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,7 +84,7 @@ public class Login extends javax.swing.JFrame {
         pwd.setForeground(new java.awt.Color(255, 255, 255));
         pwd.setText("Password");
         jPanel2.add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
-        jPanel2.add(UserNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 330, 30));
+        jPanel2.add(Usertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 330, 30));
 
         login.setBackground(new java.awt.Color(255, 102, 0));
         login.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -100,7 +101,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 130, 40));
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 330, 30));
+        jPanel2.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 330, 30));
+
+        lblError.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblError.setForeground(new java.awt.Color(255, 51, 51));
+        jPanel2.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 390, 430));
 
@@ -123,14 +128,21 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        PHIViewCitizen citizen = new PHIViewCitizen();
-
-        citizen.setVisible(true);
-        this.dispose();
+       
     }//GEN-LAST:event_loginMouseClicked
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
          // TODO add your handling code here:
+         String user = Usertxt.getText();
+         String pass = passTxt.getText();
+         
+        loginTest loginTest = new loginTest(user,pass);
+        String res =loginTest.validateLogin();
+        lblError.setText(res);
+        if ("Sucess".equals(res)){
+            dispose();
+        }
+        
     }//GEN-LAST:event_loginActionPerformed
 
     /**
@@ -170,15 +182,16 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Uname;
-    private javax.swing.JTextField UserNametxt;
+    private javax.swing.JTextField Usertxt;
     private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel lblError;
     private javax.swing.JButton login;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel name;
     private javax.swing.JLabel name1;
+    private javax.swing.JPasswordField passTxt;
     private javax.swing.JLabel pwd;
     private javax.swing.JLabel signin;
     private javax.swing.JLabel welcome1;

@@ -50,6 +50,11 @@ public class AdminHomepage extends javax.swing.JFrame {
 
         logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
         logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 30, 100, 30));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/Officer.png"))); // NOI18N
@@ -167,6 +172,13 @@ public class AdminHomepage extends javax.swing.JFrame {
        infected.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_Infected1MouseClicked
+
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        // TODO add your handling code here:
+        AdminHomepage.dispose();
+        Login.setVisible(true);
+        
+    }//GEN-LAST:event_logoutActionPerformed
 
     /**
      * @param args the command line arguments

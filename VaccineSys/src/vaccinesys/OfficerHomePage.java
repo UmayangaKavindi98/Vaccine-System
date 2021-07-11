@@ -43,6 +43,11 @@ public class OfficerHomePage extends javax.swing.JFrame {
 
         logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
         logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 30, 100, 30));
 
         SendMail.setBackground(new java.awt.Color(255, 51, 51));
@@ -105,6 +110,14 @@ public class OfficerHomePage extends javax.swing.JFrame {
     private void CreateUser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUser1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_CreateUser1MouseClicked
+
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        // TODO add your handling code here:
+       Login log = new Login();
+
+       log.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_logoutActionPerformed
 
     /**
      * @param args the command line arguments

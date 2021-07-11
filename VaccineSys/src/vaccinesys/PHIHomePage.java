@@ -108,6 +108,11 @@ public class PHIHomePage extends javax.swing.JFrame {
 
         logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
         logout.setText("Log Out");
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, 100, 30));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/PHI.png"))); // NOI18N
@@ -171,6 +176,14 @@ public class PHIHomePage extends javax.swing.JFrame {
     private void ViewCitizenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewCitizenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewCitizenActionPerformed
+
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        // TODO add your handling code here:
+       Login log = new Login();
+
+       log.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_logoutActionPerformed
 
     /**
      * @param args the command line arguments
