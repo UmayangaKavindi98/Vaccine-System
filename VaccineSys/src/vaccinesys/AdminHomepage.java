@@ -223,8 +223,7 @@ public class AdminHomepage extends javax.swing.JFrame {
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
-        AdminHomepage.dispose();
-        Login.setVisible(true);
+        
         
     }//GEN-LAST:event_logoutActionPerformed
 

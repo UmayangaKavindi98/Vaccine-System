@@ -5,17 +5,42 @@
  */
 package vaccinesys;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import net.proteanit.sql.DbUtils;
+
 /**
  *
  * @author Umayanga
  */
 public class PHIViewVaccinated extends javax.swing.JFrame {
+    String input;
+    DbConnection mdc = new DbConnection();
+    Connection con = mdc.getMyConnection();
 
     /**
      * Creates new form PHIViewVaccinated
      */
     public PHIViewVaccinated() {
         initComponents();
+    }
+    public void getStatement(String input){
+     this.input = input;
+        displayTable();
+    }
+    public void displayTable(){
+        
+        try {
+            PreparedStatement tmt;
+            tmt = con.prepareStatement(input);
+            ResultSet rs = tmt.executeQuery();
+            toTable.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (SQLException ex) {
+            System.out.println("error");
+        }
+        
     }
 
     /**
@@ -28,19 +53,61 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
+        srcTxt = new javax.swing.JTextField();
+        search = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        toTable = new javax.swing.JTable();
         topic = new javax.swing.JLabel();
         back = new javax.swing.JButton();
-        search = new javax.swing.JButton();
-        searchtxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vaccinated Details");
         setResizable(false);
 
+        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        background.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 270, 30));
+
+        search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
+        search.setText("Search");
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+        background.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 120, 30));
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("View All");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 100, 30));
+
+        toTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(toTable);
+
+        background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 680, 310));
+
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("View Vaccinated Details");
+        background.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
 
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
@@ -49,47 +116,11 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
                 backMouseClicked(evt);
             }
         });
-
-        search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
-        search.setText("Search");
+        background.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         jLabel1.setText("cdv");
-
-        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
-        background.setLayout(backgroundLayout);
-        backgroundLayout.setHorizontalGroup(
-            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(searchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(820, 820, 820)
-                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(390, 390, 390)
-                .addComponent(topic))
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        backgroundLayout.setVerticalGroup(
-            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(searchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(topic))
-            .addComponent(jLabel1)
-        );
+        background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +142,21 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
        home.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_backMouseClicked
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+        String nic = srcTxt.getText();
+        String myStatement="select * from vaccinated WHERE NIC = \""+nic+"\"";
+        getStatement(myStatement);
+    }//GEN-LAST:event_searchActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String myStatement="SELECT * FROM vaccinated";
+
+        getStatement(myStatement);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,9 +196,12 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JPanel background;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton search;
-    private javax.swing.JTextField searchtxt;
+    private javax.swing.JTextField srcTxt;
+    private javax.swing.JTable toTable;
     private javax.swing.JLabel topic;
     // End of variables declaration//GEN-END:variables
 }
