@@ -179,10 +179,7 @@ public class PHIHomePage extends javax.swing.JFrame {
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
-       Login log = new Login();
-
-       log.setVisible(true);
-       this.dispose();
+      
     }//GEN-LAST:event_logoutActionPerformed
 
     /**

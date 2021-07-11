@@ -28,10 +28,11 @@ public class PHIViewCitizen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable = new javax.swing.JTable();
         topic = new javax.swing.JLabel();
         back = new javax.swing.JButton();
-        search = new javax.swing.JButton();
-        searchtxt = new javax.swing.JTextField();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,10 +41,28 @@ public class PHIViewCitizen extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setText("jButton1");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, -1, -1));
+
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 730, 290));
+
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("View Citizen Details");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
 
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
@@ -53,11 +72,6 @@ public class PHIViewCitizen extends javax.swing.JFrame {
             }
         });
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
-
-        search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
-        search.setText("Search");
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 130, 40));
-        jPanel1.add(searchtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 570, 40));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("jLabel1");
@@ -122,9 +136,10 @@ public class PHIViewCitizen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JLabel background;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton search;
-    private javax.swing.JTextField searchtxt;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable;
     private javax.swing.JLabel topic;
     // End of variables declaration//GEN-END:variables
 }
