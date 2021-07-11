@@ -5,17 +5,42 @@
  */
 package vaccinesys;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import net.proteanit.sql.DbUtils;
+
 /**
  *
  * @author Umayanga
  */
 public class PHIViewInfected extends javax.swing.JFrame {
-
+    
+    String input;
+    DbConnection mdc = new DbConnection();
+    Connection con = mdc.getMyConnection();
     /**
      * Creates new form PHIViewInfected
      */
     public PHIViewInfected() {
         initComponents();
+    }
+     public void getStatement(String input){
+     this.input = input;
+    displayTable();
+    }
+    public void displayTable(){
+        
+        try {
+            PreparedStatement tmt;
+            tmt = con.prepareStatement(input);
+            ResultSet rs = tmt.executeQuery();
+            toTable.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (SQLException ex) {
+            System.out.println("error");
+        }
+        
     }
 
     /**
@@ -28,10 +53,13 @@ public class PHIViewInfected extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        search = new javax.swing.JButton();
+        srcTxt = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        toTable = new javax.swing.JTable();
         topic = new javax.swing.JLabel();
         back = new javax.swing.JButton();
-        search = new javax.swing.JButton();
-        searchtxt = new javax.swing.JTextField();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,10 +68,46 @@ public class PHIViewInfected extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("View All");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 90, 100, 30));
+
+        search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
+        search.setText("Search");
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 120, 30));
+        jPanel1.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 270, 30));
+
+        toTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(toTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 680, 310));
+
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("View Infected Details");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, -1, -1));
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
 
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
@@ -53,11 +117,6 @@ public class PHIViewInfected extends javax.swing.JFrame {
             }
         });
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
-
-        search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
-        search.setText("Search");
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 130, 40));
-        jPanel1.add(searchtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 570, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         Background.setText("View");
@@ -83,6 +142,22 @@ public class PHIViewInfected extends javax.swing.JFrame {
        home.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_backMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       String myStatement="SELECT * FROM Infected";
+     
+       getStatement(myStatement);
+     
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+        String nic = srcTxt.getText();
+        String myStatement="select * from infected WHERE NIC = \""+nic+"\"";
+        getStatement(myStatement);
+
+    }//GEN-LAST:event_searchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,9 +197,12 @@ public class PHIViewInfected extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JButton back;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton search;
-    private javax.swing.JTextField searchtxt;
+    private javax.swing.JTextField srcTxt;
+    private javax.swing.JTable toTable;
     private javax.swing.JLabel topic;
     // End of variables declaration//GEN-END:variables
 }

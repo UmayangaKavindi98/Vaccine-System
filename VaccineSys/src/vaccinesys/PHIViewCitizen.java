@@ -5,17 +5,42 @@
  */
 package vaccinesys;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JFrame;
+import net.proteanit.sql.DbUtils;
 /**
  *
  * @author Umayanga
  */
 public class PHIViewCitizen extends javax.swing.JFrame {
-
+    
+    String input;
+    DbConnection mdc = new DbConnection();
+    Connection con = mdc.getMyConnection();
     /**
      * Creates new form PHIViewCitizen
      */
     public PHIViewCitizen() {
         initComponents();
+    }
+     public void getStatement(String input){
+     this.input = input;
+    displayTable();
+    }
+    public void displayTable(){
+        
+        try {
+            PreparedStatement tmt;
+            tmt = con.prepareStatement(input);
+            ResultSet rs = tmt.executeQuery();
+            toTable.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (SQLException ex) {
+            System.out.println("error");
+        }
+        
     }
 
     /**
@@ -28,9 +53,11 @@ public class PHIViewCitizen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        srcTxt = new javax.swing.JTextField();
+        search = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable = new javax.swing.JTable();
+        toTable = new javax.swing.JTable();
         topic = new javax.swing.JLabel();
         back = new javax.swing.JButton();
         background = new javax.swing.JLabel();
@@ -40,11 +67,29 @@ public class PHIViewCitizen extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 270, 30));
 
-        jButton1.setText("jButton1");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, -1, -1));
+        search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
+        search.setText("Search");
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 120, 30));
 
-        jTable.setModel(new javax.swing.table.DefaultTableModel(
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("View All");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, 150, 30));
+
+        toTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -55,9 +100,9 @@ public class PHIViewCitizen extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable);
+        jScrollPane1.setViewportView(toTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 730, 290));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 730, 290));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,6 +142,22 @@ public class PHIViewCitizen extends javax.swing.JFrame {
        home.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_backMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       String myStatement="SELECT * FROM citizen";
+     
+       getStatement(myStatement);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+        String nic = srcTxt.getText();
+        String myStatement="select * from citizen WHERE NIC = \""+nic+"\"";
+        getStatement(myStatement);
+        
+        
+    }//GEN-LAST:event_searchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,7 +200,9 @@ public class PHIViewCitizen extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable;
+    private javax.swing.JButton search;
+    private javax.swing.JTextField srcTxt;
+    private javax.swing.JTable toTable;
     private javax.swing.JLabel topic;
     // End of variables declaration//GEN-END:variables
 }
