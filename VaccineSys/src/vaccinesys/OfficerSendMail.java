@@ -66,7 +66,7 @@ public class OfficerSendMail extends javax.swing.JFrame {
                 createMouseClicked(evt);
             }
         });
-        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 520, 50));
+        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 530, 50));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, -4, 1100, 550));
