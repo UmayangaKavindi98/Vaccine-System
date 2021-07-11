@@ -9,12 +9,12 @@ package vaccinesys;
  *
  * @author Umayanga
  */
-public class AdminVaccinatedDetails extends javax.swing.JFrame {
+public class AdminInfectedDetails extends javax.swing.JFrame {
 
     /**
-     * Creates new form AdminVaccinatedDetails
+     * Creates new form AdminInfectedDetails
      */
-    public AdminVaccinatedDetails() {
+    public AdminInfectedDetails() {
         initComponents();
     }
 
@@ -27,62 +27,57 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        Vid = new javax.swing.JLabel();
-        Vname = new javax.swing.JLabel();
-        place = new javax.swing.JLabel();
-        date = new javax.swing.JLabel();
-        dose = new javax.swing.JLabel();
-        Vidtxt = new javax.swing.JTextField();
-        Vnametxt = new javax.swing.JTextField();
-        placetxt = new javax.swing.JTextField();
-        datetxt = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        NIC = new javax.swing.JLabel();
+        Fname = new javax.swing.JLabel();
+        Lname6 = new javax.swing.JLabel();
+        address = new javax.swing.JLabel();
+        occupation = new javax.swing.JLabel();
         back = new javax.swing.JButton();
-        doseOne = new javax.swing.JRadioButton();
-        doseTwo = new javax.swing.JRadioButton();
+        phone = new javax.swing.JLabel();
+        phonetxt = new javax.swing.JTextField();
+        date = new javax.swing.JTextField();
+        addresstxt = new javax.swing.JTextField();
+        NICtxt = new javax.swing.JTextField();
+        Lnametxt = new javax.swing.JTextField();
+        Fnametxt = new javax.swing.JTextField();
         add = new javax.swing.JButton();
         update1 = new javax.swing.JButton();
-        delete = new javax.swing.JButton();
-        NIC = new javax.swing.JLabel();
-        NICtxt = new javax.swing.JTextField();
-        NICDel1 = new javax.swing.JLabel();
         NICDeltxt = new javax.swing.JTextField();
+        NICDel = new javax.swing.JLabel();
+        delete = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Vaccinated Details");
+        setTitle("Infected Details");
         setResizable(false);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Vid.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        Vid.setForeground(new java.awt.Color(255, 255, 255));
-        Vid.setText("Vccine id");
-        jPanel2.add(Vid, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, -1));
+        NIC.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        NIC.setForeground(new java.awt.Color(255, 255, 255));
+        NIC.setText("NIC number");
+        jPanel1.add(NIC, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 140, 30));
 
-        Vname.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        Vname.setForeground(new java.awt.Color(255, 255, 255));
-        Vname.setText("Vaccine name");
-        jPanel2.add(Vname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
+        Fname.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        Fname.setForeground(new java.awt.Color(255, 255, 255));
+        Fname.setText("First name");
+        jPanel1.add(Fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
-        place.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        place.setForeground(new java.awt.Color(255, 255, 255));
-        place.setText("Place");
-        jPanel2.add(place, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, -1));
+        Lname6.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        Lname6.setForeground(new java.awt.Color(255, 255, 255));
+        Lname6.setText("Last name");
+        jPanel1.add(Lname6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, -1, -1));
 
-        date.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        date.setForeground(new java.awt.Color(255, 255, 255));
-        date.setText("Date");
-        jPanel2.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
+        address.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        address.setForeground(new java.awt.Color(255, 255, 255));
+        address.setText("Address");
+        jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, -1, -1));
 
-        dose.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        dose.setForeground(new java.awt.Color(255, 255, 255));
-        dose.setText("Dose type");
-        jPanel2.add(dose, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
-        jPanel2.add(Vidtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 260, 30));
-        jPanel2.add(Vnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 260, 30));
-        jPanel2.add(placetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 260, 30));
-        jPanel2.add(datetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 260, 30));
+        occupation.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        occupation.setForeground(new java.awt.Color(255, 255, 255));
+        occupation.setText("Infected date");
+        jPanel1.add(occupation, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
 
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
@@ -96,17 +91,18 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
 
-        doseOne.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
-        doseOne.setForeground(new java.awt.Color(255, 255, 255));
-        doseOne.setText("1 Dose");
-        jPanel2.add(doseOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
-
-        doseTwo.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
-        doseTwo.setForeground(new java.awt.Color(255, 255, 255));
-        doseTwo.setText("2 Dose");
-        jPanel2.add(doseTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
+        phone.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        phone.setForeground(new java.awt.Color(255, 255, 255));
+        phone.setText("Phone number");
+        jPanel1.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
+        jPanel1.add(phonetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 260, 30));
+        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 260, 30));
+        jPanel1.add(addresstxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 260, 30));
+        jPanel1.add(NICtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 260, 30));
+        jPanel1.add(Lnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 260, 30));
+        jPanel1.add(Fnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 260, 30));
 
         add.setBackground(new java.awt.Color(255, 51, 51));
         add.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -117,7 +113,7 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
-        jPanel2.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 130, 40));
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 130, 40));
 
         update1.setBackground(new java.awt.Color(255, 51, 51));
         update1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -128,7 +124,13 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 update1MouseClicked(evt);
             }
         });
-        jPanel2.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 130, 40));
+        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 130, 40));
+        jPanel1.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
+
+        NICDel.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
+        NICDel.setForeground(new java.awt.Color(255, 255, 255));
+        NICDel.setText("NIC number");
+        jPanel1.add(NICDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 140, 30));
 
         delete.setBackground(new java.awt.Color(255, 51, 51));
         delete.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -139,33 +141,20 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 deleteMouseClicked(evt);
             }
         });
-        jPanel2.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 130, 40));
-
-        NIC.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        NIC.setForeground(new java.awt.Color(255, 255, 255));
-        NIC.setText("NIC");
-        jPanel2.add(NIC, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 140, 30));
-        jPanel2.add(NICtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 260, 30));
-
-        NICDel1.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
-        NICDel1.setForeground(new java.awt.Color(255, 255, 255));
-        NICDel1.setText("NIC");
-        jPanel2.add(NICDel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 40, 30));
-        jPanel2.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
+        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 130, 40));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
-        background.setText("jLabel2");
-        jPanel2.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 550));
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1100, 560));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, Short.MAX_VALUE)
         );
 
         pack();
@@ -214,45 +203,44 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminVaccinatedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInfectedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminVaccinatedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInfectedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminVaccinatedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInfectedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminVaccinatedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInfectedDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminVaccinatedDetails().setVisible(true);
+                new AdminInfectedDetails().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fname;
+    private javax.swing.JTextField Fnametxt;
+    private javax.swing.JLabel Lname6;
+    private javax.swing.JTextField Lnametxt;
     private javax.swing.JLabel NIC;
-    private javax.swing.JLabel NICDel1;
+    private javax.swing.JLabel NICDel;
     private javax.swing.JTextField NICDeltxt;
     private javax.swing.JTextField NICtxt;
-    private javax.swing.JLabel Vid;
-    private javax.swing.JTextField Vidtxt;
-    private javax.swing.JLabel Vname;
-    private javax.swing.JTextField Vnametxt;
     private javax.swing.JButton add;
+    private javax.swing.JLabel address;
+    private javax.swing.JTextField addresstxt;
     private javax.swing.JButton back;
     private javax.swing.JLabel background;
-    private javax.swing.JLabel date;
-    private javax.swing.JTextField datetxt;
+    private javax.swing.JTextField date;
     private javax.swing.JButton delete;
-    private javax.swing.JLabel dose;
-    private javax.swing.JRadioButton doseOne;
-    private javax.swing.JRadioButton doseTwo;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel place;
-    private javax.swing.JTextField placetxt;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel occupation;
+    private javax.swing.JLabel phone;
+    private javax.swing.JTextField phonetxt;
     private javax.swing.JButton update1;
     // End of variables declaration//GEN-END:variables
 }

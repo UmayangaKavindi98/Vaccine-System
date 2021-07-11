@@ -29,9 +29,10 @@ public class OfficerHomePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         logout = new javax.swing.JButton();
-        CreateUser = new javax.swing.JButton();
+        SendMail = new javax.swing.JButton();
         topic = new javax.swing.JLabel();
         img = new javax.swing.JLabel();
+        CreateUser1 = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,17 +45,17 @@ public class OfficerHomePage extends javax.swing.JFrame {
         logout.setText("Log Out");
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 30, 100, 30));
 
-        CreateUser.setBackground(new java.awt.Color(255, 51, 51));
-        CreateUser.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        CreateUser.setForeground(new java.awt.Color(255, 255, 255));
-        CreateUser.setText("Create User Accounts");
-        CreateUser.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
-        CreateUser.addMouseListener(new java.awt.event.MouseAdapter() {
+        SendMail.setBackground(new java.awt.Color(255, 51, 51));
+        SendMail.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
+        SendMail.setForeground(new java.awt.Color(255, 255, 255));
+        SendMail.setText("Send Mail ");
+        SendMail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        SendMail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CreateUserMouseClicked(evt);
+                SendMailMouseClicked(evt);
             }
         });
-        jPanel1.add(CreateUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 470, 60));
+        jPanel1.add(SendMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 470, 60));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,6 +64,18 @@ public class OfficerHomePage extends javax.swing.JFrame {
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/Officer.png"))); // NOI18N
         jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, 250));
+
+        CreateUser1.setBackground(new java.awt.Color(255, 51, 51));
+        CreateUser1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
+        CreateUser1.setForeground(new java.awt.Color(255, 255, 255));
+        CreateUser1.setText("Create User Accounts");
+        CreateUser1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        CreateUser1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CreateUser1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(CreateUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 470, 60));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("vdfb");
@@ -82,12 +95,16 @@ public class OfficerHomePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CreateUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserMouseClicked
-        OfficerUserAccounts user = new OfficerUserAccounts();
+    private void SendMailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SendMailMouseClicked
+        OfficerSendMail mail= new OfficerSendMail();
 
-        user.setVisible(true);
+        mail.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_CreateUserMouseClicked
+    }//GEN-LAST:event_SendMailMouseClicked
+
+    private void CreateUser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUser1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CreateUser1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -125,7 +142,8 @@ public class OfficerHomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreateUser;
+    private javax.swing.JButton CreateUser1;
+    private javax.swing.JButton SendMail;
     private javax.swing.JLabel background;
     private javax.swing.JLabel img;
     private javax.swing.JPanel jPanel1;
