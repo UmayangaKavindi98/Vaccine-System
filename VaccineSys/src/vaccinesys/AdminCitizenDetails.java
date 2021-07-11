@@ -59,8 +59,6 @@ public class AdminCitizenDetails extends javax.swing.JFrame {
         setTitle("Citizen Details");
         setResizable(false);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
         back.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,54 +71,42 @@ public class AdminCitizenDetails extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
 
         NICDel.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         NICDel.setForeground(new java.awt.Color(255, 255, 255));
         NICDel.setText("NIC number");
-        jPanel2.add(NICDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 140, 30));
 
         Fname.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Fname.setForeground(new java.awt.Color(255, 255, 255));
         Fname.setText("First name");
-        jPanel2.add(Fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
 
         address.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         address.setForeground(new java.awt.Color(255, 255, 255));
         address.setText("Address");
-        jPanel2.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
         occupation.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         occupation.setForeground(new java.awt.Color(255, 255, 255));
         occupation.setText("Occupation");
-        jPanel2.add(occupation, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, -1, -1));
 
         phone.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         phone.setForeground(new java.awt.Color(255, 255, 255));
         phone.setText("Phone number");
-        jPanel2.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
 
         email.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         email.setForeground(new java.awt.Color(255, 255, 255));
         email.setText("Email address");
-        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         DOB.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         DOB.setForeground(new java.awt.Color(255, 255, 255));
         DOB.setText("Date of birth");
-        jPanel2.add(DOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, -1, -1));
 
         gender.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         gender.setForeground(new java.awt.Color(255, 255, 255));
         gender.setText("Gender");
-        jPanel2.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 460, -1, -1));
 
         Lname6.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Lname6.setForeground(new java.awt.Color(255, 255, 255));
         Lname6.setText("Last name");
-        jPanel2.add(Lname6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
-        jPanel2.add(occupationtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 260, 30));
-        jPanel2.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
 
         delete.setBackground(new java.awt.Color(255, 51, 51));
         delete.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -131,23 +117,14 @@ public class AdminCitizenDetails extends javax.swing.JFrame {
                 deleteMouseClicked(evt);
             }
         });
-        jPanel2.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 130, 40));
-        jPanel2.add(Lnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 260, 30));
-        jPanel2.add(addresstxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 260, 30));
-        jPanel2.add(Fnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 260, 30));
-        jPanel2.add(DOBtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 260, 30));
-        jPanel2.add(phonetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 260, 30));
-        jPanel2.add(gendertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 260, 30));
 
         male.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         male.setForeground(new java.awt.Color(255, 255, 255));
         male.setText("Male");
-        jPanel2.add(male, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, -1, -1));
 
         female.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         female.setForeground(new java.awt.Color(255, 255, 255));
         female.setText("Female");
-        jPanel2.add(female, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, -1, -1));
 
         add.setBackground(new java.awt.Color(255, 51, 51));
         add.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -158,7 +135,6 @@ public class AdminCitizenDetails extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
-        jPanel2.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 130, 40));
 
         update1.setBackground(new java.awt.Color(255, 51, 51));
         update1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -169,17 +145,164 @@ public class AdminCitizenDetails extends javax.swing.JFrame {
                 update1MouseClicked(evt);
             }
         });
-        jPanel2.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 130, 40));
 
         NIC.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         NIC.setForeground(new java.awt.Color(255, 255, 255));
         NIC.setText("NIC number");
-        jPanel2.add(NIC, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 140, 30));
-        jPanel2.add(NICtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 260, 30));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("jLabel1");
-        jPanel2.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 550));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(810, 810, 810)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(Fname))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Lnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(addresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(occupation)
+                .addGap(106, 106, 106)
+                .addComponent(occupationtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(phonetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(NICDel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(email))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(DOB))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(gender)
+                .addGap(295, 295, 295)
+                .addComponent(female)
+                .addGap(195, 195, 195)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(NICtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(DOBtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(Lname6))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(800, 800, 800)
+                .addComponent(NICDeltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Fnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(male))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(phone))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(gendertxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(address))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(NIC, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(Fname)
+                .addGap(21, 21, 21)
+                .addComponent(Lnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(addresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(occupation))
+                    .addComponent(occupationtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(phonetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(NICDel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addComponent(email)
+                .addGap(31, 31, 31)
+                .addComponent(DOB)
+                .addGap(1, 1, 1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(gender))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(female))
+                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(NICtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(DOBtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(Lname6))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(NICDeltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(Fnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(450, 450, 450)
+                .addComponent(male))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(310, 310, 310)
+                .addComponent(phone))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(gendertxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(address))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(NIC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(background)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

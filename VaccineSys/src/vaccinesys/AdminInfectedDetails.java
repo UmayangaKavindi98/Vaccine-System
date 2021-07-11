@@ -52,32 +52,25 @@ public class AdminInfectedDetails extends javax.swing.JFrame {
         setTitle("Infected Details");
         setResizable(false);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         NIC.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         NIC.setForeground(new java.awt.Color(255, 255, 255));
         NIC.setText("NIC number");
-        jPanel1.add(NIC, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 140, 30));
 
         Fname.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Fname.setForeground(new java.awt.Color(255, 255, 255));
         Fname.setText("First name");
-        jPanel1.add(Fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
         Lname6.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Lname6.setForeground(new java.awt.Color(255, 255, 255));
         Lname6.setText("Last name");
-        jPanel1.add(Lname6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, -1, -1));
 
         address.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         address.setForeground(new java.awt.Color(255, 255, 255));
         address.setText("Address");
-        jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, -1, -1));
 
         occupation.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         occupation.setForeground(new java.awt.Color(255, 255, 255));
         occupation.setText("Infected date");
-        jPanel1.add(occupation, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
 
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
@@ -91,18 +84,10 @@ public class AdminInfectedDetails extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
 
         phone.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         phone.setForeground(new java.awt.Color(255, 255, 255));
         phone.setText("Phone number");
-        jPanel1.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
-        jPanel1.add(phonetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 260, 30));
-        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 260, 30));
-        jPanel1.add(addresstxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 260, 30));
-        jPanel1.add(NICtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 260, 30));
-        jPanel1.add(Lnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 260, 30));
-        jPanel1.add(Fnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 260, 30));
 
         add.setBackground(new java.awt.Color(255, 51, 51));
         add.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -113,7 +98,6 @@ public class AdminInfectedDetails extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 130, 40));
 
         update1.setBackground(new java.awt.Color(255, 51, 51));
         update1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -124,13 +108,10 @@ public class AdminInfectedDetails extends javax.swing.JFrame {
                 update1MouseClicked(evt);
             }
         });
-        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 130, 40));
-        jPanel1.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
 
         NICDel.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         NICDel.setForeground(new java.awt.Color(255, 255, 255));
         NICDel.setText("NIC number");
-        jPanel1.add(NICDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 140, 30));
 
         delete.setBackground(new java.awt.Color(255, 51, 51));
         delete.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -141,10 +122,123 @@ public class AdminInfectedDetails extends javax.swing.JFrame {
                 deleteMouseClicked(evt);
             }
         });
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 130, 40));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1100, 560));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(NIC, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Lnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(address))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(800, 800, 800)
+                .addComponent(NICDeltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(occupation))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(NICtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(addresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(Fname))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(810, 810, 810)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Fnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(670, 670, 670)
+                .addComponent(NICDel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(phonetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(phone))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(810, 810, 810)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(Lname6))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(background)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(NIC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Lnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addComponent(address)
+                .addGap(11, 11, 11)
+                .addComponent(NICDeltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(occupation))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(NICtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(290, 290, 290)
+                .addComponent(addresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(Fname))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(Fnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(330, 330, 330)
+                .addComponent(NICDel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(phonetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(phone))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(440, 440, 440)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addComponent(Lname6))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(430, 430, 430)
+                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

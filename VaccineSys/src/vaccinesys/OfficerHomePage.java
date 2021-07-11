@@ -39,8 +39,6 @@ public class OfficerHomePage extends javax.swing.JFrame {
         setTitle("Officer");
         setResizable(false);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
         logout.setText("Log Out");
         logout.addActionListener(new java.awt.event.ActionListener() {
@@ -48,7 +46,6 @@ public class OfficerHomePage extends javax.swing.JFrame {
                 logoutActionPerformed(evt);
             }
         });
-        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 30, 100, 30));
 
         SendMail.setBackground(new java.awt.Color(255, 51, 51));
         SendMail.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -60,15 +57,12 @@ public class OfficerHomePage extends javax.swing.JFrame {
                 SendMailMouseClicked(evt);
             }
         });
-        jPanel1.add(SendMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 470, 60));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("Officer");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 180, -1));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/Officer.png"))); // NOI18N
-        jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, 250));
 
         CreateUser1.setBackground(new java.awt.Color(255, 51, 51));
         CreateUser1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -80,11 +74,49 @@ public class OfficerHomePage extends javax.swing.JFrame {
                 CreateUser1MouseClicked(evt);
             }
         });
-        jPanel1.add(CreateUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 470, 60));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("vdfb");
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 550));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(img)
+                .addGap(154, 154, 154)
+                .addComponent(SendMail, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(topic, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(460, 460, 460)
+                .addComponent(CreateUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(950, 950, 950)
+                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(SendMail, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(topic))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(CreateUser1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(background)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,7 +140,10 @@ public class OfficerHomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_SendMailMouseClicked
 
     private void CreateUser1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUser1MouseClicked
-        // TODO add your handling code here:
+        OfficerUserAccounts account= new OfficerUserAccounts();
+
+        account.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_CreateUser1MouseClicked
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed

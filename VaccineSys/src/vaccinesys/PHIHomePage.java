@@ -41,8 +41,6 @@ public class PHIHomePage extends javax.swing.JFrame {
         setTitle("PHI");
         setResizable(false);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         ViewCitizen.setBackground(new java.awt.Color(255, 51, 51));
         ViewCitizen.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
         ViewCitizen.setForeground(new java.awt.Color(255, 255, 255));
@@ -58,7 +56,6 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewCitizenActionPerformed(evt);
             }
         });
-        jPanel1.add(ViewCitizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 450, 60));
 
         ViewVaccine.setBackground(new java.awt.Color(255, 51, 51));
         ViewVaccine.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -75,7 +72,6 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewVaccineActionPerformed(evt);
             }
         });
-        jPanel1.add(ViewVaccine, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 450, 60));
 
         ViewVaccinated.setBackground(new java.awt.Color(255, 51, 51));
         ViewVaccinated.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -87,7 +83,6 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewVaccinatedMouseClicked(evt);
             }
         });
-        jPanel1.add(ViewVaccinated, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 450, 60));
 
         ViewInfected.setBackground(new java.awt.Color(255, 51, 51));
         ViewInfected.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -99,12 +94,10 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewInfectedMouseClicked(evt);
             }
         });
-        jPanel1.add(ViewInfected, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 450, 60));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("PHI");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 80, -1));
 
         logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
         logout.setText("Log Out");
@@ -113,15 +106,58 @@ public class PHIHomePage extends javax.swing.JFrame {
                 logoutActionPerformed(evt);
             }
         });
-        jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, 100, 30));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/PHI.png"))); // NOI18N
-        jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         background.setBackground(new java.awt.Color(255, 102, 51));
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("jLabel1");
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 550));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(970, 970, 970)
+                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(topic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(230, 230, 230)
+                .addComponent(ViewCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(img)
+                .addGap(174, 174, 174)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ViewVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ViewVaccinated, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ViewInfected, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(topic))
+                    .addComponent(ViewCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(img)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(ViewVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70)
+                        .addComponent(ViewVaccinated, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(ViewInfected, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addComponent(background)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

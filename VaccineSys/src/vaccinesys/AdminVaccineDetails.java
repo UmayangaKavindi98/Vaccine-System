@@ -50,8 +50,6 @@ public class AdminVaccineDetails extends javax.swing.JFrame {
         setTitle("Vaccine Details");
         setResizable(false);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
         back.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,37 +62,26 @@ public class AdminVaccineDetails extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
 
         Vname.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Vname.setForeground(new java.awt.Color(255, 255, 255));
         Vname.setText("Vaccine Name");
-        jPanel1.add(Vname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 140, 30));
 
         Vid.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Vid.setForeground(new java.awt.Color(255, 255, 255));
         Vid.setText("Vaccine id");
-        jPanel1.add(Vid, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
 
         lot.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         lot.setForeground(new java.awt.Color(255, 255, 255));
         lot.setText("Lot id");
-        jPanel1.add(lot, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
 
         mfd.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         mfd.setForeground(new java.awt.Color(255, 255, 255));
         mfd.setText("Manufactured day");
-        jPanel1.add(mfd, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
 
         exd.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         exd.setForeground(new java.awt.Color(255, 255, 255));
         exd.setText("Expired day");
-        jPanel1.add(exd, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
-        jPanel1.add(Exdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 260, 30));
-        jPanel1.add(Mfdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 260, 30));
-        jPanel1.add(Lotidtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 260, 30));
-        jPanel1.add(Vidtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 260, 30));
-        jPanel1.add(VNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 260, 30));
 
         add.setBackground(new java.awt.Color(255, 51, 51));
         add.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -105,7 +92,6 @@ public class AdminVaccineDetails extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 110, 130, 40));
 
         update1.setBackground(new java.awt.Color(255, 51, 51));
         update1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -116,7 +102,6 @@ public class AdminVaccineDetails extends javax.swing.JFrame {
                 update1MouseClicked(evt);
             }
         });
-        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, 130, 40));
 
         delete.setBackground(new java.awt.Color(255, 51, 51));
         delete.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -127,17 +112,115 @@ public class AdminVaccineDetails extends javax.swing.JFrame {
                 deleteMouseClicked(evt);
             }
         });
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, 130, 40));
 
         VidDel.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         VidDel.setForeground(new java.awt.Color(255, 255, 255));
         VidDel.setText("Vaccine id");
-        jPanel1.add(VidDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, -1, -1));
-        jPanel1.add(VidtDelxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 370, 160, 30));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         Background.setText("jLabel1");
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 550));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(VNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(Vid))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Mfdtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Exdtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
+                .addComponent(VidDel))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(800, 800, 800)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Lotidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(Vidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(790, 790, 790)
+                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(790, 790, 790)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(Vname, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(lot))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(exd))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(820, 820, 820)
+                .addComponent(VidtDelxt, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(mfd))
+            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(VNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(Vid)
+                .addGap(101, 101, 101)
+                .addComponent(Mfdtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Exdtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(VidDel)))
+                .addGap(51, 51, 51)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(230, 230, 230)
+                .addComponent(Lotidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(Vidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(Vname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(lot))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(exd))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(VidtDelxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(300, 300, 300)
+                .addComponent(mfd))
+            .addComponent(Background)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

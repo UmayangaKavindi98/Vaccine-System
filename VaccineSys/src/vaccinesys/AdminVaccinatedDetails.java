@@ -53,36 +53,25 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
         setTitle("Vaccinated Details");
         setResizable(false);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         Vid.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Vid.setForeground(new java.awt.Color(255, 255, 255));
         Vid.setText("Vccine id");
-        jPanel2.add(Vid, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, -1));
 
         Vname.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         Vname.setForeground(new java.awt.Color(255, 255, 255));
         Vname.setText("Vaccine name");
-        jPanel2.add(Vname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
 
         place.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         place.setForeground(new java.awt.Color(255, 255, 255));
         place.setText("Place");
-        jPanel2.add(place, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, -1));
 
         date.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText("Date");
-        jPanel2.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
 
         dose.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         dose.setForeground(new java.awt.Color(255, 255, 255));
         dose.setText("Dose type");
-        jPanel2.add(dose, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
-        jPanel2.add(Vidtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 260, 30));
-        jPanel2.add(Vnametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 260, 30));
-        jPanel2.add(placetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 260, 30));
-        jPanel2.add(datetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 260, 30));
 
         back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
         back.setText("<<");
@@ -96,17 +85,14 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
 
         doseOne.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         doseOne.setForeground(new java.awt.Color(255, 255, 255));
         doseOne.setText("1 Dose");
-        jPanel2.add(doseOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
 
         doseTwo.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         doseTwo.setForeground(new java.awt.Color(255, 255, 255));
         doseTwo.setText("2 Dose");
-        jPanel2.add(doseTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
 
         add.setBackground(new java.awt.Color(255, 51, 51));
         add.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -117,7 +103,6 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 addMouseClicked(evt);
             }
         });
-        jPanel2.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 60, 130, 40));
 
         update1.setBackground(new java.awt.Color(255, 51, 51));
         update1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -128,7 +113,6 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 update1MouseClicked(evt);
             }
         });
-        jPanel2.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 190, 130, 40));
 
         delete.setBackground(new java.awt.Color(255, 51, 51));
         delete.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -139,23 +123,140 @@ public class AdminVaccinatedDetails extends javax.swing.JFrame {
                 deleteMouseClicked(evt);
             }
         });
-        jPanel2.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 130, 40));
 
         NIC.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         NIC.setForeground(new java.awt.Color(255, 255, 255));
         NIC.setText("NIC");
-        jPanel2.add(NIC, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 140, 30));
-        jPanel2.add(NICtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 260, 30));
 
         NICDel1.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 18)); // NOI18N
         NICDel1.setForeground(new java.awt.Color(255, 255, 255));
         NICDel1.setText("NIC");
-        jPanel2.add(NICDel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 40, 30));
-        jPanel2.add(NICDeltxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 320, 190, 30));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("jLabel2");
-        jPanel2.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 550));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(Vid)
+                .addGap(559, 559, 559)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(placetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(520, 520, 520)
+                .addComponent(doseTwo)
+                .addGap(191, 191, 191)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(810, 810, 810)
+                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(Vname))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(Vidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(NICtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(NIC, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(date))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(800, 800, 800)
+                .addComponent(NICDeltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(datetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(Vnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(dose))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(720, 720, 720)
+                .addComponent(NICDel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(doseOne))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(place))
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(Vid))
+                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(160, 160, 160)
+                .addComponent(placetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(doseTwo)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(update1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(Vname))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(Vidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(NICtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(NIC, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(340, 340, 340)
+                .addComponent(date))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(NICDeltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(330, 330, 330)
+                .addComponent(datetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(Vnametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(dose))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(NICDel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(doseOne))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(270, 270, 270)
+                .addComponent(place))
+            .addComponent(background)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
