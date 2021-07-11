@@ -37,8 +37,8 @@ public class Login extends javax.swing.JFrame {
         Uname = new javax.swing.JLabel();
         pwd = new javax.swing.JLabel();
         UserNametxt = new javax.swing.JTextField();
-        pwdtxt = new javax.swing.JTextField();
         login = new javax.swing.JButton();
+        jPasswordField1 = new javax.swing.JPasswordField();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,7 +84,6 @@ public class Login extends javax.swing.JFrame {
         pwd.setText("Password");
         jPanel2.add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
         jPanel2.add(UserNametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 330, 30));
-        jPanel2.add(pwdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 330, 30));
 
         login.setBackground(new java.awt.Color(255, 102, 0));
         login.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -101,6 +100,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 130, 40));
+        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 330, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 390, 450));
 
@@ -130,7 +130,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginMouseClicked
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+         // TODO add your handling code here:
     }//GEN-LAST:event_loginActionPerformed
 
     /**
@@ -174,12 +174,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JButton login;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel name;
     private javax.swing.JLabel name1;
     private javax.swing.JLabel pwd;
-    private javax.swing.JTextField pwdtxt;
     private javax.swing.JLabel signin;
     private javax.swing.JLabel welcome1;
     // End of variables declaration//GEN-END:variables
