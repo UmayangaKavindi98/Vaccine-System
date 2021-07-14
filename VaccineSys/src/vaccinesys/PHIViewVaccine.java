@@ -79,7 +79,7 @@ public class PHIViewVaccine extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, 120, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 120, 40));
 
         toTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -134,7 +134,7 @@ public class PHIViewVaccine extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String myStatement="SELECT * FROM vaccine";
+        String myStatement="SELECT * FROM vac_details";
 
         getStatement(myStatement);
     }//GEN-LAST:event_jButton1ActionPerformed
