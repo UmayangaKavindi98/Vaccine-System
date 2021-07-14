@@ -137,6 +137,7 @@ public class AdminHomepage extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendMouseClicked
@@ -147,30 +148,30 @@ public class AdminHomepage extends javax.swing.JFrame {
     }//GEN-LAST:event_sendMouseClicked
 
     private void CitizenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CitizenMouseClicked
-       // AdminCitizenDetails citizen = new AdminCitizenDetails();
+        AdminCitizenDetails citizen = new AdminCitizenDetails();
 
-        //citizen.setVisible(true);
+        citizen.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_CitizenMouseClicked
 
     private void Vaccine1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Vaccine1MouseClicked
-       // AdminVaccineDetails vaccine = new AdminVaccineDetails();
+        AdminVaccineDetails vaccine = new AdminVaccineDetails();
 
-        ///vaccine.setVisible(true);
+        vaccine.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Vaccine1MouseClicked
 
     private void Vaccinated1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Vaccinated1MouseClicked
-        // AdminVaccinatedDetails vaccinated = new AdminVaccinatedDetails();
+         AdminVaccinatedDetails vaccinated = new AdminVaccinatedDetails();
 
-        //vaccinated.setVisible(true);
+        vaccinated.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Vaccinated1MouseClicked
 
     private void Infected1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Infected1MouseClicked
-        // AdminInfectedDetails infected = new AdminInfectedDetails();
+         AdminInfectedDetails infected = new AdminInfectedDetails();
 
-        //infected.setVisible(true);
+        infected.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Infected1MouseClicked
 

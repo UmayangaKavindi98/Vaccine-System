@@ -63,15 +63,15 @@ public class loginTest {
             if (count == 0){
                 return  "No record found";
             }else{
-                if("sys_admin".equals(job)){
+                if("Admin".equals(job)){
                     AdminHomepage frame = new AdminHomepage();
                     frame.setVisible(true);
                     return  "Sucess";
-                }else if("sys_officer".equals(job)){
+                }else if("Officer".equals(job)){
                     OfficerHomePage frame = new OfficerHomePage();
                     frame.setVisible(true);
                     return  "Sucess";
-                }else if("sys_PHI".equals(job)){
+                }else if("PHI".equals(job)){
                     PHIHomePage frame = new PHIHomePage();
                     frame.setVisible(true);
                     return  "Sucess";
