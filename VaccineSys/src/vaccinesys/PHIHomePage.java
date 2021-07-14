@@ -110,6 +110,11 @@ public class PHIHomePage extends javax.swing.JFrame {
         jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/icons8-exit-30.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, -1, -1));
 
         background.setBackground(new java.awt.Color(255, 102, 51));
@@ -170,6 +175,13 @@ public class PHIHomePage extends javax.swing.JFrame {
     private void ViewCitizenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewCitizenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewCitizenActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+       WelcomePage logout = new WelcomePage();
+       logout.show();
+        
+       dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments

@@ -74,6 +74,11 @@ public class OfficerHomePage extends javax.swing.JFrame {
         jPanel1.add(CreateUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 470, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/icons8-exit-30.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
@@ -107,6 +112,13 @@ public class OfficerHomePage extends javax.swing.JFrame {
         account.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_CreateUser1MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+       WelcomePage logout = new WelcomePage();
+       logout.show();
+        
+        dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
