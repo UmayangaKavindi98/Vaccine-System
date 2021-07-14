@@ -29,148 +29,94 @@ public class AdminHomepage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         topic = new javax.swing.JLabel();
-        logout = new javax.swing.JButton();
         img = new javax.swing.JLabel();
         Citizen = new javax.swing.JButton();
         SendMail = new javax.swing.JButton();
         Vaccine1 = new javax.swing.JButton();
         Vaccinated1 = new javax.swing.JButton();
         Infected1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("Admin");
-
-        logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
-        logout.setText("Log Out");
-        logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutActionPerformed(evt);
-            }
-        });
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 180, -1));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/Admin.png"))); // NOI18N
+        jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
-        Citizen.setBackground(new java.awt.Color(255, 51, 51));
+        Citizen.setBackground(new java.awt.Color(255, 153, 0));
         Citizen.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        Citizen.setForeground(new java.awt.Color(255, 255, 255));
+        Citizen.setForeground(new java.awt.Color(153, 0, 0));
         Citizen.setText("Manage Citizen Details");
-        Citizen.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        Citizen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         Citizen.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CitizenMouseClicked(evt);
             }
         });
+        jPanel1.add(Citizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 420, 60));
 
-        SendMail.setBackground(new java.awt.Color(255, 51, 51));
+        SendMail.setBackground(new java.awt.Color(255, 153, 0));
         SendMail.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        SendMail.setForeground(new java.awt.Color(255, 255, 255));
+        SendMail.setForeground(new java.awt.Color(153, 0, 0));
         SendMail.setText("Send Mail");
-        SendMail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        SendMail.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         SendMail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SendMailMouseClicked(evt);
             }
         });
+        jPanel1.add(SendMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 420, 60));
 
-        Vaccine1.setBackground(new java.awt.Color(255, 51, 51));
+        Vaccine1.setBackground(new java.awt.Color(255, 153, 0));
         Vaccine1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        Vaccine1.setForeground(new java.awt.Color(255, 255, 255));
+        Vaccine1.setForeground(new java.awt.Color(153, 0, 0));
         Vaccine1.setText("Vaccine Details");
-        Vaccine1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        Vaccine1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         Vaccine1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Vaccine1MouseClicked(evt);
             }
         });
+        jPanel1.add(Vaccine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 420, 60));
 
-        Vaccinated1.setBackground(new java.awt.Color(255, 51, 51));
+        Vaccinated1.setBackground(new java.awt.Color(255, 153, 0));
         Vaccinated1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        Vaccinated1.setForeground(new java.awt.Color(255, 255, 255));
+        Vaccinated1.setForeground(new java.awt.Color(153, 0, 0));
         Vaccinated1.setText("Vaccinated Details");
-        Vaccinated1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        Vaccinated1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         Vaccinated1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Vaccinated1MouseClicked(evt);
             }
         });
+        jPanel1.add(Vaccinated1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 420, 60));
 
-        Infected1.setBackground(new java.awt.Color(255, 51, 51));
+        Infected1.setBackground(new java.awt.Color(255, 153, 0));
         Infected1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        Infected1.setForeground(new java.awt.Color(255, 255, 255));
+        Infected1.setForeground(new java.awt.Color(153, 0, 0));
         Infected1.setText("Infected Details");
-        Infected1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        Infected1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         Infected1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Infected1MouseClicked(evt);
             }
         });
+        jPanel1.add(Infected1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 420, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/icons8-exit-30.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("rhnnf");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(Citizen, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(Infected1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(img))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(SendMail, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(Vaccine1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(950, 950, 950)
-                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(Vaccinated1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(topic, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(Citizen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(360, 360, 360)
-                .addComponent(Infected1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(img))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(450, 450, 450)
-                .addComponent(SendMail, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(Vaccine1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(270, 270, 270)
-                .addComponent(Vaccinated1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(topic))
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 540));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -221,12 +167,6 @@ public class AdminHomepage extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_Infected1MouseClicked
 
-    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_logoutActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -270,8 +210,8 @@ public class AdminHomepage extends javax.swing.JFrame {
     private javax.swing.JButton Vaccine1;
     private javax.swing.JLabel background;
     private javax.swing.JLabel img;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton logout;
     private javax.swing.JLabel topic;
     // End of variables declaration//GEN-END:variables
 }

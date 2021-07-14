@@ -33,19 +33,21 @@ public class PHIHomePage extends javax.swing.JFrame {
         ViewVaccinated = new javax.swing.JButton();
         ViewInfected = new javax.swing.JButton();
         topic = new javax.swing.JLabel();
-        logout = new javax.swing.JButton();
         img = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PHI");
         setResizable(false);
 
-        ViewCitizen.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ViewCitizen.setBackground(new java.awt.Color(255, 153, 0));
         ViewCitizen.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        ViewCitizen.setForeground(new java.awt.Color(255, 255, 255));
+        ViewCitizen.setForeground(new java.awt.Color(153, 0, 0));
         ViewCitizen.setText("View Citizen Details");
-        ViewCitizen.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
+        ViewCitizen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         ViewCitizen.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewCitizenMouseClicked(evt);
@@ -56,12 +58,13 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewCitizenActionPerformed(evt);
             }
         });
+        jPanel1.add(ViewCitizen, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 480, 60));
 
-        ViewVaccine.setBackground(new java.awt.Color(255, 51, 51));
+        ViewVaccine.setBackground(new java.awt.Color(255, 153, 0));
         ViewVaccine.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        ViewVaccine.setForeground(new java.awt.Color(255, 255, 255));
+        ViewVaccine.setForeground(new java.awt.Color(153, 0, 0));
         ViewVaccine.setText("View Vaccine Details");
-        ViewVaccine.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        ViewVaccine.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         ViewVaccine.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewVaccineMouseClicked(evt);
@@ -72,92 +75,47 @@ public class PHIHomePage extends javax.swing.JFrame {
                 ViewVaccineActionPerformed(evt);
             }
         });
+        jPanel1.add(ViewVaccine, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 480, 60));
 
-        ViewVaccinated.setBackground(new java.awt.Color(255, 51, 51));
+        ViewVaccinated.setBackground(new java.awt.Color(255, 153, 0));
         ViewVaccinated.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        ViewVaccinated.setForeground(new java.awt.Color(255, 255, 255));
+        ViewVaccinated.setForeground(new java.awt.Color(153, 0, 0));
         ViewVaccinated.setText("View Vaccinated Details");
-        ViewVaccinated.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        ViewVaccinated.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         ViewVaccinated.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewVaccinatedMouseClicked(evt);
             }
         });
+        jPanel1.add(ViewVaccinated, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 480, 60));
 
-        ViewInfected.setBackground(new java.awt.Color(255, 51, 51));
+        ViewInfected.setBackground(new java.awt.Color(255, 153, 0));
         ViewInfected.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        ViewInfected.setForeground(new java.awt.Color(255, 255, 255));
+        ViewInfected.setForeground(new java.awt.Color(153, 0, 0));
         ViewInfected.setText("View Infected Details");
-        ViewInfected.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        ViewInfected.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         ViewInfected.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewInfectedMouseClicked(evt);
             }
         });
+        jPanel1.add(ViewInfected, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 480, 60));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 48)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("PHI");
-
-        logout.setFont(new java.awt.Font("Tekton Pro", 0, 14)); // NOI18N
-        logout.setText("Log Out");
-        logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutActionPerformed(evt);
-            }
-        });
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 80, -1));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/PHI.png"))); // NOI18N
+        jPanel1.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/icons8-exit-30.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, -1, -1));
 
         background.setBackground(new java.awt.Color(255, 102, 51));
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("jLabel1");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(970, 970, 970)
-                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(topic, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(230, 230, 230)
-                .addComponent(ViewCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(img)
-                .addGap(174, 174, 174)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ViewVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ViewVaccinated, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ViewInfected, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(topic))
-                    .addComponent(ViewCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(ViewVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
-                        .addComponent(ViewVaccinated, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addComponent(ViewInfected, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addComponent(background)
-        );
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,11 +171,6 @@ public class PHIHomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewCitizenActionPerformed
 
-    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
-        // TODO add your handling code here:
-      
-    }//GEN-LAST:event_logoutActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -260,8 +213,8 @@ public class PHIHomePage extends javax.swing.JFrame {
     private javax.swing.JButton ViewVaccine;
     private javax.swing.JLabel background;
     private javax.swing.JLabel img;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton logout;
     private javax.swing.JLabel topic;
     // End of variables declaration//GEN-END:variables
 }

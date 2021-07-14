@@ -52,6 +52,7 @@ public class PHIViewCitizen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         srcTxt = new javax.swing.JTextField();
         search = new javax.swing.JButton();
@@ -59,15 +60,18 @@ public class PHIViewCitizen extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         toTable = new javax.swing.JTable();
         topic = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Citizen Details");
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 270, 30));
+        jPanel1.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 270, 40));
 
         search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
         search.setText("Search");
@@ -76,18 +80,19 @@ public class PHIViewCitizen extends javax.swing.JFrame {
                 searchActionPerformed(evt);
             }
         });
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 120, 30));
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 120, 40));
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("View All");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, 150, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 150, 40));
 
         toTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -102,21 +107,23 @@ public class PHIViewCitizen extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(toTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 730, 290));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 730, 290));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("View Citizen Details");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
 
-        back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
-        back.setText("<<");
-        back.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/back.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backMouseClicked(evt);
+                jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 30));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/citizen.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         background.setText("jLabel1");
@@ -136,13 +143,6 @@ public class PHIViewCitizen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
-       PHIHomePage home = new PHIHomePage();
-
-       home.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_backMouseClicked
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        String myStatement="SELECT * FROM citizen";
@@ -158,6 +158,13 @@ public class PHIViewCitizen extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_searchActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+       PHIHomePage home = new PHIHomePage();
+
+       home.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -195,9 +202,11 @@ public class PHIViewCitizen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
     private javax.swing.JLabel background;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton search;

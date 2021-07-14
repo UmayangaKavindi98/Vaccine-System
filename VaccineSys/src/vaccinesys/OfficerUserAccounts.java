@@ -18,57 +18,23 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
 
     DbConnection mdc = new DbConnection();
     
-    
-    
+   
     public OfficerUserAccounts() {
         initComponents();
         AddUser();
     }
 
     
-    
-    
      void AddUser(){
           OfficerUserAcc account = new  OfficerUserAcc();
-    
+          
+  
     Connection con=null;
-     try
-        {
-                con = DbConnection.getMyConnection();   //Add connection
-                
-                String result = "SELECT * FROM medical";
-                
-                PreparedStatement ps = con.prepareStatement(result);
-                ResultSet rs = ps.executeQuery();
-     if(rs.next())
-                {
-                    nametxt.setText(rs.getString("username"));
-                    pwdtxt.setText(rs.getString("password"));
-                    admin.setText(rs.getString("user_type"));
-                    officer.setText(rs.getString("user_type"));
-                    phi.setText(rs.getString("user_type"));
-                    
-                }     
-     
-        }
-        
-   
-        catch(Exception e)
-        {
-                javax.swing.JOptionPane.showMessageDialog(null,e);
-        }
-     
-        nametxt.setText("");
-        pwdtxt.setText("");
-        admin.setText("");
-        officer.setText("");
-        phi.setText("");
+
        
     }
      
-     
-     
-     
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -78,18 +44,23 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         phi = new javax.swing.JRadioButton();
+        officer = new javax.swing.JRadioButton();
+        admin = new javax.swing.JRadioButton();
         topic = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
         pwd = new javax.swing.JLabel();
         type = new javax.swing.JLabel();
-        officer = new javax.swing.JRadioButton();
-        admin = new javax.swing.JRadioButton();
         nametxt = new javax.swing.JTextField();
         pwdtxt = new javax.swing.JTextField();
         create = new javax.swing.JButton();
-        back = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -98,42 +69,49 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        buttonGroup1.add(phi);
         phi.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         phi.setForeground(new java.awt.Color(255, 255, 255));
         phi.setText("PHI");
-        jPanel1.add(phi, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 310, -1, -1));
+        jPanel1.add(phi, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 340, -1, -1));
+
+        buttonGroup1.add(officer);
+        officer.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
+        officer.setForeground(new java.awt.Color(255, 255, 255));
+        officer.setText("Officer");
+        jPanel1.add(officer, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, -1, -1));
+
+        buttonGroup1.add(admin);
+        admin.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
+        admin.setForeground(new java.awt.Color(255, 255, 255));
+        admin.setText("Admin");
+        jPanel1.add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, -1, -1));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("Create User Accounts");
-        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, -1, -1));
 
         name.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         name.setForeground(new java.awt.Color(255, 255, 255));
         name.setText("User Name");
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 140, 30));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 140, 30));
 
         pwd.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         pwd.setForeground(new java.awt.Color(255, 255, 255));
         pwd.setText("Password");
-        jPanel1.add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
+        jPanel1.add(pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
 
         type.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
         type.setForeground(new java.awt.Color(255, 255, 255));
         type.setText("Type");
-        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
-        officer.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
-        officer.setForeground(new java.awt.Color(255, 255, 255));
-        officer.setText("Officer");
-        jPanel1.add(officer, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, -1, -1));
+        nametxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel1.add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 400, 50));
 
-        admin.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
-        admin.setForeground(new java.awt.Color(255, 255, 255));
-        admin.setText("Admin");
-        jPanel1.add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, -1, -1));
-        jPanel1.add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 400, 50));
-        jPanel1.add(pwdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 400, 50));
+        pwdtxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel1.add(pwdtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 400, 50));
 
         create.setBackground(new java.awt.Color(255, 51, 51));
         create.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
@@ -144,21 +122,23 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
                 createMouseClicked(evt);
             }
         });
-        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 160, 50));
-
-        back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
-        back.setText("<<");
-        back.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backMouseClicked(evt);
-            }
-        });
-        back.addActionListener(new java.awt.event.ActionListener() {
+        create.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
+                createActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 70, 30));
+        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 430, 160, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/back.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/acc.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
 
         background.setFont(new java.awt.Font("Bahnschrift", 0, 13)); // NOI18N
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
@@ -180,19 +160,41 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
 
     private void createMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createMouseClicked
         
-        Connection myConn=null;
+        OfficerUserAcc user = new OfficerUserAcc();
+        
+      
+        Connection con=null;
         
         try
         {
-             myConn = DbConnection.getMyConnection();  //Add connection
+             con = DbConnection.getMyConnection();  //Add connection
            
-            String result=" INSERT INTO user (username, password, user_type) VALUES ('"+getUsername()+"' ,'"+getpassword()+", '"+getUser_type()+"') ";
-            
-            
-            PreparedStatement ps=myConn.prepareStatement(result);
-            if(ps.execute()){
+            //String result=" INSERT INTO user (username, password, user_type) VALUES ('"+nametxt.getText()+"','"+pwdtxt.getText()+"', '"++"') ";
              
+            String result=" INSERT INTO user (username, password, user_type) VALUES (?, ?, ?)";
+            
+            
+            PreparedStatement ps=con.prepareStatement(result);
+            
+            
+            ps.setString(1, nametxt.getText());
+            ps.setString(2, pwdtxt.getText());
+            
+            String user_role = null;
+            if(admin.isSelected()){
+                user_role = admin.getText();
             }
+            if(officer.isSelected()){
+                user_role = officer.getText();
+            }
+            if(phi.isSelected()){
+                user_role = phi.getText();
+            }
+            ps.setString(3, user_role);
+            
+            
+            ps.executeUpdate();
+           
             
         }
         
@@ -210,16 +212,16 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
                   
     }//GEN-LAST:event_createMouseClicked
 
-    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+    private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         OfficerHomePage home = new OfficerHomePage();
 
         home.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_backMouseClicked
-
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backActionPerformed
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -258,9 +260,14 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton admin;
-    private javax.swing.JButton back;
     private javax.swing.JLabel background;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JButton create;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel name;
     private javax.swing.JTextField nametxt;

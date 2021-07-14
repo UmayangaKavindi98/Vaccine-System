@@ -59,7 +59,8 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         toTable = new javax.swing.JTable();
         topic = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,7 +68,7 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
         setResizable(false);
 
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        background.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 270, 30));
+        background.add(srcTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 270, 40));
 
         search.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
         search.setText("Search");
@@ -76,18 +77,19 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
                 searchActionPerformed(evt);
             }
         });
-        background.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 120, 30));
+        background.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 120, 40));
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Tekton Pro", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("View All");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 100, 30));
+        background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, 130, 40));
 
         toTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -102,21 +104,23 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(toTable);
 
-        background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 680, 310));
+        background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 680, 310));
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("View Vaccinated Details");
-        background.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
+        background.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
 
-        back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
-        back.setText("<<");
-        back.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/back.png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backMouseClicked(evt);
+                jLabel2MouseClicked(evt);
             }
         });
-        background.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 30));
+        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 30));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/vaccinated.png"))); // NOI18N
+        background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
         jLabel1.setText("cdv");
@@ -136,13 +140,6 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
-       PHIHomePage home = new PHIHomePage();
-
-       home.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_backMouseClicked
-
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         // TODO add your handling code here:
         String nic = srcTxt.getText();
@@ -157,6 +154,13 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
         getStatement(myStatement);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        PHIHomePage home = new PHIHomePage();
+
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -194,10 +198,11 @@ public class PHIViewVaccinated extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
     private javax.swing.JPanel background;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton search;
     private javax.swing.JTextField srcTxt;

@@ -4,6 +4,16 @@
  * and open the template in the editor.
  */
 package vaccinesys;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.PasswordAuthentication;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.mail.Transport;
+import javax.swing.JOptionPane;
+
+
 
 /**
  *
@@ -29,71 +39,92 @@ public class OfficerSendMail extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         topic = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
-        create = new javax.swing.JButton();
+        send = new javax.swing.JButton();
+        from = new javax.swing.JLabel();
+        subject = new javax.swing.JLabel();
+        msg = new javax.swing.JLabel();
+        to = new javax.swing.JLabel();
+        subjecttxt = new javax.swing.JTextField();
+        fromtxt = new javax.swing.JTextField();
+        totxt = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        msgtxt = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Send Mail");
+        setResizable(false);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         topic.setFont(new java.awt.Font("Tekton Pro", 1, 36)); // NOI18N
         topic.setForeground(new java.awt.Color(255, 255, 255));
         topic.setText("Send Mail ");
+        jPanel1.add(topic, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
 
-        back.setFont(new java.awt.Font("Tekton Pro", 0, 12)); // NOI18N
-        back.setText("<<");
-        back.addMouseListener(new java.awt.event.MouseAdapter() {
+        send.setBackground(new java.awt.Color(255, 51, 51));
+        send.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
+        send.setText("Send");
+        send.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        send.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backMouseClicked(evt);
+                sendMouseClicked(evt);
             }
         });
-        back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
-            }
-        });
+        jPanel1.add(send, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 460, 160, 50));
 
-        create.setBackground(new java.awt.Color(255, 51, 51));
-        create.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        create.setText("Create Mail");
-        create.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(51, 51, 51)));
-        create.addMouseListener(new java.awt.event.MouseAdapter() {
+        from.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
+        from.setForeground(new java.awt.Color(255, 255, 255));
+        from.setText("From");
+        jPanel1.add(from, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, -1, -1));
+
+        subject.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
+        subject.setForeground(new java.awt.Color(255, 255, 255));
+        subject.setText("Subject");
+        jPanel1.add(subject, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
+
+        msg.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
+        msg.setForeground(new java.awt.Color(255, 255, 255));
+        msg.setText("Message");
+        jPanel1.add(msg, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, -1, -1));
+
+        to.setFont(new java.awt.Font("Bell Gothic Std Light", 0, 24)); // NOI18N
+        to.setForeground(new java.awt.Color(255, 255, 255));
+        to.setText("To ");
+        jPanel1.add(to, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, -1));
+
+        subjecttxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel1.add(subjecttxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 530, 40));
+
+        fromtxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        fromtxt.setText("rideemaliyaddamedical@gmail.com");
+        jPanel1.add(fromtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 530, 40));
+
+        totxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel1.add(totxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 530, 40));
+
+        msgtxt.setColumns(20);
+        msgtxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        msgtxt.setRows(5);
+        jScrollPane1.setViewportView(msgtxt);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 530, 180));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/back.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                createMouseClicked(evt);
+                jLabel1MouseClicked(evt);
             }
         });
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/mail.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/img/background.jpg"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(390, 390, 390)
-                .addComponent(topic))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(300, 300, 300)
-                .addComponent(create, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(1, 1, 1)
-                .addComponent(background))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(topic)))
-                .addGap(163, 163, 163)
-                .addComponent(create, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(background)
-        );
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,23 +140,56 @@ public class OfficerSendMail extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+    private void sendMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendMouseClicked
+        
+        String ToEmail = totxt.getText();
+        String FromEmail = fromtxt.getText();
+        String FromEmailPassword = "7553889Ur@";   //Your email password
+        String Subjects = subjecttxt.getText();
+        
+        Properties properties = new Properties();
+        properties.put("mail.smtp.auth","true");
+        properties.put("mail.smtp.starttls.enable","true"); 
+        properties.put("mail.smtp.host","smtp.gmail.com");
+        properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory"); 
+	properties.setProperty("mail.smtp.socketFactory.fallback", "false"); 
+	properties.setProperty("mail.smtp.port", "465"); 
+	properties.setProperty("mail.smtp.socketFactory.port", "465");
+        
+        Session session = Session.getDefaultInstance(properties,new javax.mail.Authenticator(){
+            protected PasswordAuthentication getPasswordAuthentication(){
+                return new PasswordAuthentication(FromEmail,FromEmailPassword);
+            }
+        });
+        
+        try{
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(FromEmail));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
+            message.setSubject(Subjects);
+            message.setText(msgtxt.getText());
+            Transport.send(message);
+            
+        }catch(Exception ex){
+            System.out.println("Mail Sent Successfully"+ex);
+        }
+        
+       
+        JOptionPane.showMessageDialog(null, "Email Sent Successfully");
+                   totxt.setText("");
+                   subjecttxt.setText("");
+                   msgtxt.setText("");
+                  
+       
+       
+    }//GEN-LAST:event_sendMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         OfficerHomePage home = new OfficerHomePage();
 
         home.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_backMouseClicked
-
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backActionPerformed
-
-    private void createMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createMouseClicked
-        PHIViewCitizen citizen = new PHIViewCitizen();
-
-        citizen.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_createMouseClicked
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -163,10 +227,20 @@ public class OfficerSendMail extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
     private javax.swing.JLabel background;
-    private javax.swing.JButton create;
+    private javax.swing.JLabel from;
+    private javax.swing.JTextField fromtxt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel msg;
+    private javax.swing.JTextArea msgtxt;
+    private javax.swing.JButton send;
+    private javax.swing.JLabel subject;
+    private javax.swing.JTextField subjecttxt;
+    private javax.swing.JLabel to;
     private javax.swing.JLabel topic;
+    private javax.swing.JTextField totxt;
     // End of variables declaration//GEN-END:variables
 }
