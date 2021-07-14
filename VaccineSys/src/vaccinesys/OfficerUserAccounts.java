@@ -26,7 +26,7 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
 
     
      void AddUser(){
-          OfficerUserAcc account = new  OfficerUserAcc();
+    //      OfficerUserAcc account = new  OfficerUserAcc();
           
   
     Connection con=null;
@@ -160,7 +160,7 @@ public class OfficerUserAccounts extends javax.swing.JFrame {
 
     private void createMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createMouseClicked
         
-        //OfficerUserAcc user = new OfficerUserAcc();
+     //   OfficerUserAcc user = new OfficerUserAcc();
         
       
         Connection con=null;
