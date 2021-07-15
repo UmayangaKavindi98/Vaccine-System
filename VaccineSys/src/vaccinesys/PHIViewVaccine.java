@@ -79,7 +79,7 @@ public class PHIViewVaccine extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 120, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 120, 120, 40));
 
         toTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
